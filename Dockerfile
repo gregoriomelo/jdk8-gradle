@@ -1,7 +1,8 @@
-FROM java:8-jdk
+FROM pandeiro/oracle-jdk8
 MAINTAINER Bamdad Dashtban
 
 WORKDIR /usr/bin
+RUN apt-get install -y unzip
 RUN wget https://services.gradle.org/distributions/gradle-2.4-all.zip && \
     unzip gradle-2.4-all.zip && \
     ln -s gradle-2.4 gradle && \
